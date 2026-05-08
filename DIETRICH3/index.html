@@ -1,0 +1,1114 @@
+!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Portfolio de Dietrich Wilfried - Ingénieur en Génie Logiciel, Infographiste et Fondateur de DW TECHNOLOGIES à Douala, Cameroun">
+  <title>Dietrich Wilfried | DW TECHNOLOGIE | Ingénieur genie Logiciel & Infographiste</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      transition: background 0.3s, color 0.3s;
+      line-height: 1.6;
+    }
+    body.dark {
+      background: #111827;
+      color: #f9fafb;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 100;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    body.dark nav {
+      background: #1f2937;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #111827;
+      transition: color 0.3s;
+    }
+    body.dark .logo {
+      color: white;
+    }
+    .logo span {
+      color: #2563eb;
+    }
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    body.dark .nav-links a {
+      color: #e5e7eb;
+    }
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .lang-btn {
+      background: none;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 20px;
+      transition: all 0.2s;
+      color: #111827;
+    }
+    body.dark .lang-btn {
+      color: white;
+    }
+    .lang-btn.active {
+      background: #2563eb;
+      color: white;
+    }
+    #theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 50%;
+      transition: background 0.2s;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #theme-toggle:hover {
+      background: rgba(0,0,0,0.1);
+    }
+    section {
+      padding: 100px 0;
+    }
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero-text h1 .highlight {
+      color: #2563eb;
+    }
+    .hero-text h2 {
+      color: #2563eb;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e0e7ff;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin: 15px 0;
+      font-size: 0.9rem;
+    }
+    body.dark .location {
+      background: #1e3a8a;
+      color: white;
+    }
+    .presentation {
+      margin: 20px 0;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+    body.dark .presentation {
+      color: #d1d5db;
+    }
+    .company-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 8px 24px;
+      border-radius: 60px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 10px 0;
+      box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+    }
+    .company-badge img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: white;
+      padding: 4px;
+    }
+    .company-logo-large {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .company-logo-large img {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .contact-info {
+      margin: 25px 0;
+    }
+    .contact-info div {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .contact-info i {
+      width: 25px;
+      color: #2563eb;
+      font-size: 1.1rem;
+    }
+    .badge {
+      background: #25D366;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-decoration: none;
+      margin-left: 5px;
+      transition: opacity 0.2s;
+    }
+    .badge:hover {
+      opacity: 0.9;
+    }
+    .telegram-badge {
+      background: #0088cc;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 12px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      font-size: 0.95rem;
+    }
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 2px solid #2563eb;
+      color: #2563eb;
+      background: transparent;
+    }
+    body.dark .btn-outline {
+      color: #60a5fa;
+      border-color: #60a5fa;
+    }
+    .btn-outline:hover {
+      background: #2563eb;
+      color: white;
+    }
+    .btn-success {
+      background: #10b981;
+      color: white;
+    }
+    .btn-success:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+    .hero-image img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+    }
+    .section-title span {
+      color: #2563eb;
+    }
+    .services-grid, .certs-grid, .design-grid, .maintenance-grid, .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card, .cert-card, .design-card, .maintenance-card, .social-card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    body.dark .service-card, body.dark .cert-card, body.dark .design-card, body.dark .maintenance-card, body.dark .social-card {
+      background: #1f2937;
+    }
+    .service-card:hover, .cert-card:hover, .design-card:hover, .maintenance-card:hover, .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .service-card i, .design-card i, .maintenance-card i, .social-card i {
+      font-size: 2.5rem;
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+    .service-card h3, .cert-card h3, .design-card h3, .maintenance-card h3, .social-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .tags span {
+      background: #e0e7ff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #1e40af;
+      font-weight: 500;
+    }
+    body.dark .tags span {
+      background: #374151;
+      color: #e5e7eb;
+    }
+    .social-icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+    .social-icon-row img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      transition: transform 0.2s;
+    }
+    .social-icon-row img:hover {
+      transform: scale(1.1);
+    }
+    .cert-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      background: #e5e7eb;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cert-card img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .issuer {
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .date {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+    .order-section {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: white;
+      border-radius: 24px;
+      margin: 40px 0;
+    }
+    .order-section .section-title span {
+      color: #fbbf24;
+    }
+    .order-form {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .order-form input, .order-form select, .order-form textarea {
+      background: white;
+      border: none;
+      margin-bottom: 15px;
+    }
+    body.dark .order-form input, body.dark .order-form select, body.dark .order-form textarea {
+      background: #1f2937;
+      color: white;
+      border: 1px solid #374151;
+    }
+    .order-form .btn {
+      background: #fbbf24;
+      color: #1f2937;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .order-form .btn:hover {
+      background: #f59e0b;
+    }
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .contact-info-card, .contact-form-container {
+      flex: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    body.dark .contact-info-card, body.dark .contact-form-container {
+      background: #1f2937;
+    }
+    .contact-info-card p {
+      margin: 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .contact-info-card i {
+      width: 28px;
+      color: #2563eb;
+      font-size: 1.2rem;
+    }
+    .company-info {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+    body.dark .company-info {
+      border-top-color: #374151;
+    }
+    .company-info img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: white;
+      font-family: inherit;
+      transition: border 0.2s;
+    }
+    body.dark input, body.dark select, body.dark textarea {
+      background: #374151;
+      border-color: #4b5563;
+      color: white;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+    .budget-custom {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    .budget-custom input {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .budget-custom span {
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #e5e7eb;
+      margin-top: 50px;
+    }
+    body.dark footer {
+      background: #1f2937;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .footer-logo img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+    .float-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 99;
+    }
+    .float-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .float-btn:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+    .telegram-btn {
+      background: #0088cc;
+      color: white;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .lightbox-close:hover {
+      color: #2563eb;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+      .location {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .contact-info div {
+        justify-content: center;
+      }
+      .float-buttons {
+        bottom: 15px;
+        right: 15px;
+      }
+      .float-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+      }
+      .lightbox-close {
+        top: 15px;
+        right: 20px;
+        font-size: 40px;
+      }
+      .company-badge {
+        font-size: 0.85rem;
+        padding: 6px 16px;
+      }
+      .budget-custom {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <!-- ESPACE LOGO 1 : Navigation (remplacer logo-dw.png par le nom de votre fichier) -->
+        <img src="img-dw - Copie.png" alt="DW TECHNOLOGIES" class="logo-img" onerror="this.src='https://placehold.co/200x200/2563eb/white?text=DW'">
+        <span>Dietrich<span>Wilfried</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" data-key="nav-home">Accueil</a></li>
+        <li><a href="#services" data-key="nav-services">Services</a></li>
+        <li><a href="#design" data-key="nav-design">Infographie</a></li>
+        <li><a href="#maintenance" data-key="nav-maintenance">Maintenance IT</a></li>
+        <li><a href="#social" data-key="nav-social">Social Media</a></li>
+        <li><a href="#certifications" data-key="nav-certs">Certifications</a></li>
+        <li><a href="#order" data-key="nav-order">Commander</a></li>
+        <li><a href="#contact" data-key="nav-contact">Contact</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button id="theme-toggle" aria-label="Thème">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-text">
+          <div class="company-badge">
+            <!-- ESPACE LOGO 2 : Badge fondateur -->
+            <img src="img-dw - Copie.png" alt="DW TECHNOLOGIES" onerror="this.src='https://placehold.co/200x200/ffffff/2563eb?text=DW'">
+            <span data-key="founder">🚀 Fondateur de DW TECHNOLOGIES</span>
+          </div>
+          <h1><span data-key="hello">Bonjour, je suis</span> <span class="highlight" data-key="name">Dietrich Wilfried</span></h1>
+          <h2 data-key="title">Ingénieur genie Logiciel | Infographiste | Consultant IT & Social Media</h2>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> <span data-key="location">Douala, Cameroun (Disponible en remote)</span></div>
+          <div class="presentation">
+            <p data-key="pres1">🎯 Expert en développement logiciel, solutions digitales et croissance sur les réseaux sociaux.</p>
+            <p data-key="pres2">Je suis le fondateur de <strong>DW TECHNOLOGIES</strong>, une entreprise innovante spécialisée dans les solutions technologiques, le design graphique, la maintenance IT, la monétisation des réseaux sociaux et le conseil en approvisionnement Chine.</p>
+            <p data-key="pres3"><strong>🔧 Spécialités :</strong> Développement web & mobile, création d'API, DevOps, audit sécurité, infographie (logos, flyers), montage vidéo pro, boost d'abonnés réels, certification de pages, formation en campagne publicitaire, achat en ligne Chine avec conseil fournisseurs & transitaires.</p>
+          </div>
+          <div class="contact-info">
+            <div><i class="fas fa-phone"></i> <span>+237 657 84 77 42</span> <a href="https://wa.me/237657847742" class="badge"><i class="fab fa-whatsapp"></i> WhatsApp</a> <a href="https://t.me/237657847742" class="badge telegram-badge"><i class="fab fa-telegram-plane"></i> Telegram</a></div>
+            <div><i class="fas fa-envelope"></i> <span>dietrich.wilfried16@gmail.com</span></div>
+          </div>
+          <div>
+            <a href="#order" class="btn btn-success" data-key="order-now-btn">📦 Commander un projet</a>
+            <a href="#contact" class="btn btn-outline" data-key="contact-btn">📞 Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="profile.jpg"alt="Photo de profil Dietrich Wilfried">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services">
+    <div class="container">
+      <div class="company-logo-large">
+        <!-- ESPACE LOGO 3 : Grand logo section Services -->
+        <img src="img-dw - Copie.png" alt="DW TECHNOLOGIE" onerror="this.src='https://placehold.co/200x200/2563eb/white?text=DW'">
+      </div>
+      <h2 class="section-title"><span data-key="services-title">Mes Services</span> <span style="font-size: 1rem;">| DW TECHNOLOGIES</span></h2>
+      <div class="services-grid">
+        <div class="service-card"><i class="fas fa-code"></i><h3 data-key="serv1-title">Développement sur mesure</h3><p data-key="serv1-desc">Création d'applications web et desktop robustes, répondant précisément à vos besoins métier.</p><div class="tags"><span>React</span><span>Node.js</span><span>Python</span><span>Java</span></div></div>
+        <div class="service-card"><i class="fas fa-database"></i><h3 data-key="serv2-title">Base de données & API</h3><p data-key="serv2-desc">Conception d'architectures de données performantes et d'API RESTful sécurisées.</p><div class="tags"><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>GraphQL</span></div></div>
+        <div class="service-card"><i class="fas fa-cloud-upload-alt"></i><h3 data-key="serv3-title">DevOps & Cloud</h3><p data-key="serv3-desc">Déploiement continu, conteneurisation et optimisation des coûts cloud.</p><div class="tags"><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span></div></div>
+        <div class="service-card"><i class="fas fa-mobile-alt"></i><h3 data-key="serv4-title">Applications Mobiles</h3><p data-key="serv4-desc">Développement cross-platform iOS et Android avec expérience utilisateur optimale.</p><div class="tags"><span>React Native</span><span>Flutter</span><span>Firebase</span></div></div>
+        <div class="service-card"><i class="fas fa-lock"></i><h3 data-key="serv5-title">Sécurité & Audit</h3><p data-key="serv5-desc">Audit de sécurité, implémentation de bonnes pratiques et conformité RGPD.</p><div class="tags"><span>OWASP</span><span>Pentesting</span><span>Chiffrement</span><span>ISO 27001</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="container">
+      <h2 class="section-title"><span data-key="design-title">🎨 Infographie & Design Graphique</span></h2>
+      <div class="design-grid">
+        <div class="design-card"><i class="fas fa-paint-brush"></i><h3 data-key="design1-title">Création de Logos</h3><p data-key="design1-desc">Design de logos uniques et professionnels qui reflètent l'identité de votre marque.</p><div class="tags"><span>Logo moderne</span><span>Identité visuelle</span><span>Vectoriel</span></div></div>
+        <div class="design-card"><i class="fas fa-leaf"></i><h3 data-key="design2-title">Flyers & Affiches</h3><p data-key="design2-desc">Flyers publicitaires, affiches, dépliants pour vos événements et promotions.</p><div class="tags"><span>Flyer</span><span>Affiche</span><span>Dépliant</span><span>Promotion</span></div></div>
+        <div class="design-card"><i class="fas fa-id-card"></i><h3 data-key="design3-title">Cartes de Visite</h3><p data-key="design3-desc">Cartes de visite élégantes et professionnelles pour vous démarquer.</p><div class="tags"><span>Cartes de visite</span><span>Papeterie</span><span>Professionnel</span></div></div>
+        <div class="design-card"><i class="fas fa-heart"></i><h3 data-key="design4-title">Cartes de Mariage</h3><p data-key="design4-desc">Création de faire-part et cartes de mariage personnalisés et uniques.</p><div class="tags"><span>Faire-part</span><span>Mariage</span><span>Personnalisé</span><span>Élégant</span></div></div>
+        <div class="design-card"><i class="fas fa-laptop-code"></i><h3 data-key="design5-title">Web Design</h3><p data-key="design5-desc">Conception d'interfaces web modernes, responsives et centrées sur l'utilisateur.</p><div class="tags"><span>UI/UX</span><span>Responsive</span><span>Moderne</span><span>Figma</span></div></div>
+        <div class="design-card"><i class="fas fa-image"></i><h3 data-key="design6-title">Retouche & Montage</h3><p data-key="design6-desc">Retouche photo, montage, habillage graphique pour vos réseaux sociaux.</p><div class="tags"><span>Photoshop</span><span>Retouche</span><span>Montage</span><span>Réseaux sociaux</span></div></div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;"><a href="#order" class="btn btn-success"><i class="fas fa-palette"></i> <span data-key="design-cta">Demander un devis design</span></a></div>
+    </div>
+  </section>
+
+  <section id="maintenance">
+    <div class="container">
+      <h2 class="section-title"><span data-key="maintenance-title">🔧 Maintenance Informatique</span></h2>
+      <div class="maintenance-grid">
+        <div class="maintenance-card"><i class="fas fa-desktop"></i><h3 data-key="maintenance1-title">Dépannage PC & Mac</h3><p data-key="maintenance1-desc">Diagnostic et réparation d'ordinateurs, remplacement de composants, optimisation.</p><div class="tags"><span>Dépannage</span><span>Réparation</span><span>Optimisation</span></div></div>
+        <div class="maintenance-card"><i class="fas fa-shield-alt"></i><h3 data-key="maintenance2-title">Sécurité & Antivirus</h3><p data-key="maintenance2-desc">Installation et configuration d'antivirus, protection contre les malwares et ransomwares.</p><div class="tags"><span>Antivirus</span><span>Malware</span><span>Sécurité</span></div></div>
+        <div class="maintenance-card"><i class="fas fa-hdd"></i><h3 data-key="maintenance3-title">Sauvegarde des données</h3><p data-key="maintenance3-desc">Mise en place de solutions de sauvegarde, récupération de données perdues.</p><div class="tags"><span>Sauvegarde</span><span>Récupération</span><span>Cloud</span></div></div>
+        <div class="maintenance-card"><i class="fas fa-wifi"></i><h3 data-key="maintenance4-title">Installation réseau</h3><p data-key="maintenance4-desc">Configuration de réseaux (WiFi, Ethernet), installation de routeurs et switchs.</p><div class="tags"><span>Réseau</span><span>WiFi</span><span>Câblage</span></div></div>
+        <div class="maintenance-card"><i class="fas fa-tachometer-alt"></i><h3 data-key="maintenance5-title">Optimisation performances</h3><p data-key="maintenance5-desc">Accélération de votre PC, nettoyage logiciel, mise à jour des drivers.</p><div class="tags"><span>Performance</span><span>Nettoyage</span><span>Optimisation</span></div></div>
+        <div class="maintenance-card"><i class="fas fa-sync-alt"></i><h3 data-key="maintenance6-title">Assistance à distance</h3><p data-key="maintenance6-desc">Support technique à distance pour résoudre vos problèmes rapidement.</p><div class="tags"><span>Support</span><span>À distance</span><span>Rapide</span></div></div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;"><a href="#order" class="btn btn-success"><i class="fas fa-tools"></i> <span data-key="maintenance-cta">Demander une intervention</span></a></div>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="container">
+      <h2 class="section-title"><span data-key="social-title">📱 Social Media & Monétisation</span></h2>
+      <div class="social-icon-row">
+        <img src="tic-tac (1).png" alt="TikTok">
+        <img src="youtube.png" alt="YouTube">
+        <img src="instagram.png" alt="Instagram">
+        <img src="facebook_2496095.png" alt="Facebook">
+      </div>
+      <div class="social-grid">
+        <div class="social-card"><i class="fas fa-video"></i><h3 data-key="social1-title">Montage vidéo professionnel</h3><p data-key="social1-desc">Montage de vidéos pour TikTok, YouTube, Instagram, Facebook avec effets, transitions et habillage pro.</p><div class="tags"><span>Montage</span><span>Effets</span><span>Habillage</span><span>Pub</span></div></div>
+        <div class="social-card"><i class="fas fa-chart-line"></i><h3 data-key="social2-title">Monétisation TikTok, YouTube, Instagram, Facebook</h3><p data-key="social2-desc">Stratégies complètes pour monétiser vos comptes, activation des programmes d'affiliation et revenus publicitaires.</p><div class="tags"><span>Monétisation</span><span>Adsense</span><span>Créateur de contenu</span></div></div>
+        <div class="social-card"><i class="fas fa-users"></i><h3 data-key="social3-title">Boost abonnés réels & engagement</h3><p data-key="social3-desc">Augmentation du nombre d'abonnés réels, vues, likes, commentaires sur TikTok, YouTube, Instagram, Facebook.</p><div class="tags"><span>Abonnés réels</span><span>Vues</span><span>Commentaires</span><span>Engagement</span></div></div>
+        <div class="social-card"><i class="fas fa-check-circle"></i><h3 data-key="social4-title">Certification des pages (Badge bleu)</h3><p data-key="social4-desc">Accompagnement pour l'obtention du badge de certification sur Instagram, Facebook, TikTok.</p><div class="tags"><span>Badge bleu</span><span>Certifié</span><span>Officiel</span></div></div>
+        <div class="social-card"><i class="fas fa-chalkboard-teacher"></i><h3 data-key="social5-title">Formation campagnes publicitaires</h3><p data-key="social5-desc">Formation en ligne pour maîtriser les publicités Facebook Ads, TikTok Ads, Google Ads et optimiser vos ROI.</p><div class="tags"><span>Facebook Ads</span><span>TikTok Ads</span><span>Google Ads</span><span>ROI</span></div></div>
+        <div class="social-card"><i class="fas fa-shopping-cart"></i><h3 data-key="social6-title">Achat en ligne Chine + Conseil fournisseurs</h3><p data-key="social6-desc">Accompagnement pour importer de Chine : sélection des meilleurs fournisseurs, négociation, contrôle qualité, conseil transitaires.</p><div class="tags"><span>Alibaba</span><span>Fournisseurs</span><span>Transitaire</span><span>Importation</span></div></div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;"><a href="#order" class="btn btn-success"><i class="fas fa-rocket"></i> <span data-key="social-cta">Booster ma présence en ligne</span></a></div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="container">
+      <div class="order-section">
+        <div style="padding: 50px;">
+          <h2 class="section-title"><span data-key="order-title">📦 Commander un Projet</span></h2>
+          <p style="text-align: center; margin-bottom: 30px;" data-key="order-desc">Quel que soit votre projet (développement, design, maintenance, réseaux sociaux, import Chine), décrivez-le moi et je vous ferai un devis personnalisé sous 24h.</p>
+          <div class="order-form">
+            <form id="orderForm">
+              <input type="text" id="order-name" placeholder="Votre nom complet" required>
+              <input type="email" id="order-email" placeholder="Votre email" required>
+              <input type="tel" id="order-phone" placeholder="Votre téléphone (optionnel)">
+              <select id="order-type" required>
+                <option value="" disabled selected>-- Type de projet --</option>
+                <option value="Développement web sur mesure">💻 Développement web sur mesure</option>
+                <option value="Application desktop">💻 Application desktop</option>
+                <option value="Application mobile">📱 Application mobile</option>
+                <option value="Création d'API RESTful / GraphQL">🔌 Création d'API</option>
+                <option value="Base de données performante">🗄️ Base de données</option>
+                <option value="DevOps & Cloud">☁️ DevOps & Cloud</option>
+                <option value="Audit sécurité / Pentesting">🔒 Audit sécurité</option>
+                <option value="Logo / Identité visuelle">🎨 Logo / Identité visuelle</option>
+                <option value="Flyer / Affiche publicitaire">📄 Flyer / Affiche</option>
+                <option value="Carte de visite professionnelle">🪪 Carte de visite</option>
+                <option value="Carte de mariage / Faire-part">💍 Carte de mariage</option>
+                <option value="Web design (maquette)">🎨 Web design</option>
+                <option value="Retouche photo / Montage photo">📸 Retouche photo</option>
+                <option value="Dépannage PC / Mac">🛠️ Dépannage PC / Mac</option>
+                <option value="Installation antivirus">🛡️ Installation antivirus</option>
+                <option value="Sauvegarde / Récupération de données">💾 Sauvegarde données</option>
+                <option value="Installation réseau">🌐 Installation réseau</option>
+                <option value="Optimisation PC">⚡ Optimisation PC</option>
+                <option value="Assistance à distance">🖥️ Assistance à distance</option>
+                <option value="Montage vidéo professionnel">🎬 Montage vidéo professionnel</option>
+                <option value="Monétisation réseaux sociaux">💰 Monétisation réseaux sociaux</option>
+                <option value="Boost abonnés réels + engagement">📈 Boost abonnés réels</option>
+                <option value="Certification page (badge bleu)">✅ Certification page</option>
+                <option value="Formation campagnes publicitaires">🎓 Formation campagnes publicitaires</option>
+                <option value="Achat Chine + conseil fournisseurs">🇨🇳 Achat Chine + conseil</option>
+                <option value="Site vitrine professionnel">🌍 Site vitrine professionnel</option>
+                <option value="Autre projet sur mesure">📌 Autre projet sur mesure</option>
+              </select>
+              <select id="order-budget-select">
+                <option value="" disabled selected>-- Budget estimé (optionnel) --</option>
+                <option value="Moins de 50€">Moins de 50€</option>
+                <option value="50€ - 200€">50€ - 200€</option>
+                <option value="200€ - 500€">200€ - 500€</option>
+                <option value="500€ - 2000€">500€ - 2000€</option>
+                <option value="Plus de 2000€">Plus de 2000€</option>
+                <option value="Autre (précisez ci-dessous)">Autre (précisez ci-dessous)</option>
+              </select>
+              <div class="budget-custom">
+                <input type="text" id="order-budget-custom" placeholder="Montant personnalisé (ex: 750€)" style="flex:1">
+                <span>ou indiquez votre budget</span>
+              </div>
+              <select id="order-delay">
+                <option value="" disabled selected>-- Délai souhaité (optionnel) --</option>
+                <option value="Urgent (moins d'1 semaine)">Urgent (moins d'1 semaine)</option>
+                <option value="1 à 3 semaines">1 à 3 semaines</option>
+                <option value="1 à 2 mois">1 à 2 mois</option>
+                <option value="3 mois ou plus">3 mois ou plus</option>
+              </select>
+              <textarea id="order-description" rows="5" placeholder="Décrivez votre projet en détail..." required></textarea>
+              <button type="submit" class="btn">📩 Envoyer ma demande</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-title"><span data-key="certs-title">Mes Certifications</span></h2>
+      <div class="certs-grid" id="certsContainer"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title"><span data-key="contact-title">Me Contacter</span></h2>
+      <div class="contact-wrapper">
+        <div class="contact-info-card">
+          <h3 data-key="contact-info-title">📬 Coordonnées</h3>
+          <p><i class="fas fa-envelope"></i> dietrich.wilfried16@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +237 657 84 77 42</p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237657847742" target="_blank" style="color:#2563eb">WhatsApp</a> / <a href="https://t.me/237657847742" target="_blank" style="color:#2563eb">Telegram</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> <span data-key="contact-location">Douala, Cameroun</span></p>
+          <p><i class="fas fa-clock"></i> <span data-key="availability">Disponible 7j/7 (réponse sous 24h)</span></p>
+          <div class="company-info">
+            <!-- ESPACE LOGO 4 : Contact -->
+            <img src="img-dw - Copie.png" alt="DW TECHNOLOGIE" onerror="this.src='https://placehold.co/200x200/2563eb/white?text=DW'">
+            <p><strong>DW TECHNOLOGIE</strong></p>
+            <p style="font-size: 0.85rem;">Développement | Design | Maintenance | Social Media | Import Chine</p>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <form id="contactForm">
+            <input type="text" id="contact-name" placeholder="Votre nom complet" required>
+            <input type="email" id="contact-email" placeholder="Votre adresse email" required>
+            <input type="text" id="contact-subject" placeholder="Sujet de votre message">
+            <textarea id="contact-message" rows="4" placeholder="Votre message..." required></textarea>
+            <button type="submit" class="btn btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> <span data-key="send-btn">Envoyer le message</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <!-- ESPACE LOGO 5 : Footer -->
+        <img src="img-dw - Copie.png" alt="DW TECHNOLOGIE" onerror="this.src='https://placehold.co/200x200/2563eb/white?text=DW'">
+        <span style="font-size: 1.2rem; font-weight: bold;">DW TECHNOLOGIE</span>
+      </div>
+      <p>&copy; 2025 <span data-key="footer-name">Dietrich Wilfried - Fondateur de DW TECHNOLOGIES</span> | <span data-key="footer-location">Douala, Cameroun</span></p>
+      <p style="font-size: 0.85rem; margin-top: 10px;" data-key="footer-available">Développement | Design | Maintenance | Social Media | Import Chine - Un partenaire global pour votre réussite</p>
+    </div>
+  </footer>
+
+  <div class="float-buttons">
+    <a href="https://t.me/237657847742" class="float-btn telegram-btn" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://wa.me/237657847742?text=Bonjour%20Dietrich%20Wilfried" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Image agrandie">
+  </div>
+
+  <script>
+    (function() {
+      const translations = {
+        fr: {
+          'nav-home': 'Accueil', 'nav-services': 'Services', 'nav-design': 'Infographie', 'nav-maintenance': 'Maintenance', 'nav-social': 'Social Media', 'nav-certs': 'Certifications', 'nav-order': 'Commander', 'nav-contact': 'Contact',
+          'hello': 'Bonjour, je suis', 'name': 'Dietrich Wilfried', 'title': 'Ingénieur genie Logiciel | Infographiste | Consultant IT & Social Media',
+          'founder': '🚀 Fondateur de DW TECHNOLOGIES', 'location': 'Douala, Cameroun (Disponible en remote)',
+          'pres1': '🎯 Expert en développement logiciel, solutions digitales et croissance sur les réseaux sociaux.',
+          'pres2': 'Je suis le fondateur de DW TECHNOLOGIES, une entreprise innovante spécialisée dans les solutions technologiques, le design graphique, la maintenance IT, la monétisation des réseaux sociaux et le conseil en approvisionnement Chine.',
+          'pres3': '🔧 Spécialités : Développement web & mobile, création d\'API, DevOps, audit sécurité, infographie (logos, flyers), montage vidéo pro, boost d\'abonnés réels, certification de pages, formation en campagne publicitaire, achat en ligne Chine avec conseil fournisseurs & transitaires.',
+          'order-now-btn': '📦 Commander un projet', 'contact-btn': '📞 Me contacter',
+          'services-title': 'Mes Services', 'design-title': '🎨 Infographie & Design Graphique', 'maintenance-title': '🔧 Maintenance Informatique',
+          'social-title': '📱 Social Media & Monétisation', 'certs-title': 'Mes Certifications', 'contact-title': 'Me Contacter',
+          'design1-title': 'Création de Logos', 'design1-desc': 'Design de logos uniques et professionnels qui reflètent l\'identité de votre marque.',
+          'design2-title': 'Flyers & Affiches', 'design2-desc': 'Flyers publicitaires, affiches, dépliants pour vos événements et promotions.',
+          'design3-title': 'Cartes de Visite', 'design3-desc': 'Cartes de visite élégantes et professionnelles pour vous démarquer.',
+          'design4-title': 'Cartes de Mariage', 'design4-desc': 'Création de faire-part et cartes de mariage personnalisés et uniques.',
+          'design5-title': 'Web Design', 'design5-desc': 'Conception d\'interfaces web modernes, responsives et centrées sur l\'utilisateur.',
+          'design6-title': 'Retouche & Montage', 'design6-desc': 'Retouche photo, montage, habillage graphique pour vos réseaux sociaux.',
+          'design-cta': 'Demander un devis design',
+          'maintenance1-title': 'Dépannage PC & Mac', 'maintenance1-desc': 'Diagnostic et réparation d\'ordinateurs, remplacement de composants, optimisation.',
+          'maintenance2-title': 'Sécurité & Antivirus', 'maintenance2-desc': 'Installation et configuration d\'antivirus, protection contre les malwares.',
+          'maintenance3-title': 'Sauvegarde des données', 'maintenance3-desc': 'Mise en place de solutions de sauvegarde, récupération de données.',
+          'maintenance4-title': 'Installation réseau', 'maintenance4-desc': 'Configuration de réseaux (WiFi, Ethernet), installation de routeurs.',
+          'maintenance5-title': 'Optimisation performances', 'maintenance5-desc': 'Accélération de votre PC, nettoyage logiciel, mise à jour des drivers.',
+          'maintenance6-title': 'Assistance à distance', 'maintenance6-desc': 'Support technique à distance pour résoudre vos problèmes rapidement.',
+          'maintenance-cta': 'Demander une intervention',
+          'social1-title': 'Montage vidéo professionnel', 'social1-desc': 'Montage de vidéos pour TikTok, YouTube, Instagram, Facebook avec effets, transitions et habillage pro.',
+          'social2-title': 'Monétisation TikTok, YouTube, Instagram, Facebook', 'social2-desc': 'Stratégies complètes pour monétiser vos comptes.',
+          'social3-title': 'Boost abonnés réels & engagement', 'social3-desc': 'Augmentation du nombre d\'abonnés réels, vues, likes, commentaires.',
+          'social4-title': 'Certification des pages (Badge bleu)', 'social4-desc': 'Accompagnement pour l\'obtention du badge de certification.',
+          'social5-title': 'Formation campagnes publicitaires', 'social5-desc': 'Formation en ligne pour maîtriser les publicités Facebook Ads, TikTok Ads, Google Ads.',
+          'social6-title': 'Achat en ligne Chine + Conseil fournisseurs', 'social6-desc': 'Accompagnement pour importer de Chine : sélection des meilleurs fournisseurs, conseil transitaires.',
+          'social-cta': 'Booster ma présence en ligne',
+          'order-title': '📦 Commander un Projet', 'order-desc': 'Quel que soit votre projet, décrivez-le moi et je vous ferai un devis personnalisé sous 24h.',
+          'serv1-title': 'Développement sur mesure', 'serv1-desc': 'Création d\'applications web et desktop robustes.',
+          'serv2-title': 'Base de données & API', 'serv2-desc': 'Conception d\'architectures de données performantes.',
+          'serv3-title': 'DevOps & Cloud', 'serv3-desc': 'Déploiement continu, conteneurisation et optimisation.',
+          'serv4-title': 'Applications Mobiles', 'serv4-desc': 'Développement cross-platform iOS et Android.',
+          'serv5-title': 'Sécurité & Audit', 'serv5-desc': 'Audit de sécurité, bonnes pratiques et conformité RGPD.',
+          'contact-info-title': '📬 Coordonnées', 'contact-location': 'Douala, Cameroun', 'availability': 'Disponible 7j/7 (réponse sous 24h)',
+          'send-btn': 'Envoyer le message', 'footer-name': 'Dietrich Wilfried - Fondateur de DW TECHNOLOGIES',
+          'footer-location': 'Douala, Cameroun', 'footer-available': 'Développement | Design | Maintenance | Social Media | Import Chine - Un partenaire global pour votre réussite'
+        },
+        en: {
+          'nav-home': 'Home', 'nav-services': 'Services', 'nav-design': 'Design', 'nav-maintenance': 'IT Support', 'nav-social': 'Social Media', 'nav-certs': 'Certifications', 'nav-order': 'Order', 'nav-contact': 'Contact',
+          'hello': 'Hello, I am', 'name': 'Dietrich Wilfried', 'title': 'Software Engineer | Graphic Designer | IT & Social Media Consultant',
+          'founder': '🚀 Founder of DW TECHNOLOGIES', 'location': 'Douala, Cameroon (Available remotely)',
+          'pres1': '🎯 Expert in software development, digital solutions and social media.',
+          'pres2': 'I am the founder of DW TECHNOLOGIES, an innovative company specializing in technology solutions, graphic design, IT maintenance, social media monetization and China sourcing consulting.',
+          'pres3': '🔧 Specialties: Web & mobile development, API creation, DevOps, security audits, graphic design (logos, flyers), professional video editing, real followers boost, page certification, ad campaigns training, China sourcing with supplier & freight forwarder advice.',
+          'order-now-btn': '📦 Order a project', 'contact-btn': '📞 Contact me',
+          'services-title': 'My Services', 'design-title': '🎨 Graphic Design', 'maintenance-title': '🔧 IT Maintenance',
+          'social-title': '📱 Social Media & Monetization', 'certs-title': 'Certifications', 'contact-title': 'Contact Me',
+          'design1-title': 'Logo Design', 'design1-desc': 'Unique and professional logo design that reflects your brand identity.',
+          'design2-title': 'Flyers & Posters', 'design2-desc': 'Advertising flyers, posters, brochures for your events and promotions.',
+          'design3-title': 'Business Cards', 'design3-desc': 'Elegant and professional business cards to stand out.',
+          'design4-title': 'Wedding Cards', 'design4-desc': 'Custom wedding invitations and cards, unique and personalized.',
+          'design5-title': 'Web Design', 'design5-desc': 'Modern, responsive user-centered web interface design.',
+          'design6-title': 'Photo Editing', 'design6-desc': 'Photo retouching, editing, graphic design for social media.',
+          'design-cta': 'Request a design quote',
+          'maintenance1-title': 'PC & Mac Repair', 'maintenance1-desc': 'Computer diagnosis and repair, component replacement, optimization.',
+          'maintenance2-title': 'Security & Antivirus', 'maintenance2-desc': 'Antivirus installation and configuration, malware protection.',
+          'maintenance3-title': 'Data Backup', 'maintenance3-desc': 'Backup solutions setup, data recovery.',
+          'maintenance4-title': 'Network Installation', 'maintenance4-desc': 'Network configuration (WiFi, Ethernet), router installation.',
+          'maintenance5-title': 'Performance Optimization', 'maintenance5-desc': 'PC acceleration, software cleaning, driver updates.',
+          'maintenance6-title': 'Remote Assistance', 'maintenance6-desc': 'Remote technical support to solve your problems quickly.',
+          'maintenance-cta': 'Request an intervention',
+          'social1-title': 'Professional Video Editing', 'social1-desc': 'Video editing for TikTok, YouTube, Instagram, Facebook with effects and transitions.',
+          'social2-title': 'TikTok, YouTube, Instagram, Facebook Monetization', 'social2-desc': 'Complete strategies to monetize your accounts.',
+          'social3-title': 'Real followers boost & engagement', 'social3-desc': 'Increase real followers, views, likes, comments.',
+          'social4-title': 'Page Certification (Blue Badge)', 'social4-desc': 'Support to obtain certification badge.',
+          'social5-title': 'Ad Campaigns Training', 'social5-desc': 'Online training to master Facebook Ads, TikTok Ads, Google Ads.',
+          'social6-title': 'China Sourcing + Supplier Consulting', 'social6-desc': 'Support for importing from China: supplier selection, negotiation, quality control, freight forwarder advice.',
+          'social-cta': 'Boost my online presence',
+          'order-title': '📦 Order a Project', 'order-desc': 'Whatever your project, describe it to me and I will send you a custom quote within 24 hours.',
+          'serv1-title': 'Custom Development', 'serv1-desc': 'Creation of robust web and desktop applications.',
+          'serv2-title': 'Database & API', 'serv2-desc': 'Design of high-performance data architectures.',
+          'serv3-title': 'DevOps & Cloud', 'serv3-desc': 'Continuous deployment, containerization and optimization.',
+          'serv4-title': 'Mobile Apps', 'serv4-desc': 'Cross-platform iOS and Android development.',
+          'serv5-title': 'Security & Audit', 'serv5-desc': 'Security auditing, best practices and GDPR compliance.',
+          'contact-info-title': '📬 Contact Info', 'contact-location': 'Douala, Cameroon', 'availability': 'Available 7/7 (response within 24h)',
+          'send-btn': 'Send message', 'footer-name': 'Dietrich Wilfried - Founder of DW TECHNOLOGIES',
+          'footer-location': 'Douala, Cameroon', 'footer-available': 'Development | Design | Maintenance | Social Media | China Sourcing - A global partner for your success'
+        }
+      };
+
+      const certifications = [
+        { titleFr: "Introduction à la Cybersécurité", titleEn: "Introduction to Cybersecurity", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-04-21 at 09.27.05.jpeg", skills: ["Cybersécurité", "Sécurité réseau"] },
+        { titleFr: "IT Customer Support Basics", titleEn: "IT Customer Support Basics", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-04-21 at 04.31.08 (2).jpeg", skills: ["Support client", "Dépannage"] },
+        { titleFr: "English for IT 1", titleEn: "English for IT 1", issu: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-04-21 at 09.27.07.jpeg", skills: ["Anglais technique"] },
+        { titleFr: "Les bases du matériel informatique", titleEn: "Computer Hardware Basics", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-05-06 at 15.42.03.jpeg", skills: ["Matériel PC"] },
+        { titleFr: "English for IT 2", titleEn: "English for IT 2", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-04-21 at 04.31.09.jpeg", skills: ["Anglais avancé"] },
+        { titleFr: "JavaScript Essential 1", titleEn: "JavaScript Essential 1", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-04-21 at 09.27.07.jpeg", skills: ["JavaScript"] },
+        { titleFr: "HTML Essential", titleEn: "HTML Essential", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-05-06 at 15.42.02.jpeg", skills: ["HTML5"] },
+        { titleFr: "CSS Essential", titleEn: "CSS Essential", issuer: "Cisco Networking Academy", date: "2026", img: "WhatsApp Image 2026-04-21 at 09.27.06.jpeg", skills: ["CSS3"] }
+      ];
+
+      let currentLang = 'fr';
+      const certsContainer = document.getElementById('certsContainer');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.querySelector('.lightbox-close');
+
+      function openLightbox(src) { if(lightbox && lightboxImg) { lightboxImg.src = src; lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; } }
+      function closeLightbox() { if(lightbox) { lightbox.classList.remove('active'); document.body.style.overflow = ''; } }
+      if(lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if(lightbox) lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && lightbox?.classList.contains('active')) closeLightbox(); });
+
+      function escapeHtml(str) { if(!str) return ''; return str.replace(/[&<>]/g, function(m) { if(m === '&') return '&amp;'; if(m === '<') return '&lt;'; if(m === '>') return '&gt;'; return m; }); }
+
+      function renderCertificates() {
+        if(!certsContainer) return;
+        certsContainer.innerHTML = '';
+        certifications.forEach(cert => {
+          const card = document.createElement('div'); card.className = 'cert-card';
+          const title = currentLang === 'fr' ? cert.titleFr : cert.titleEn;
+          card.innerHTML = `<img src="${cert.img}" alt="${escapeHtml(title)}" loading="lazy" class="cert-image"><h3>${escapeHtml(title)}</h3><div class="issuer">${escapeHtml(cert.issuer)}</div><div class="date">${escapeHtml(cert.date)}</div><div class="tags">${cert.skills.map(s => `<span>${escapeHtml(s)}</span>`).join('')}</div>`;
+          const imgEl = card.querySelector('.cert-image');
+          if(imgEl) imgEl.addEventListener('click', (e) => { e.stopPropagation(); openLightbox(cert.img); });
+          certsContainer.appendChild(card);
+        });
+      }
+
+      function updateLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if(translations[lang] && translations[lang][key]) {
+            if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { if(el.placeholder !== undefined) el.placeholder = translations[lang][key]; }
+            else { el.innerHTML = translations[lang][key]; }
+          }
+        });
+        renderCertificates();
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          updateLanguage(btn.getAttribute('data-lang'));
+        });
+      });
+
+      const toggleBtn = document.getElementById('theme-toggle');
+      const body = document.body;
+      const savedTheme = localStorage.getItem('theme');
+      if(savedTheme === 'dark') body.classList.add('dark');
+      if(toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          body.classList.toggle('dark');
+          localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+          toggleBtn.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+        toggleBtn.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if(href === "#" || href === "") return;
+          const target = document.querySelector(href);
+          if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+      });
+
+      const orderForm = document.getElementById('orderForm');
+      if(orderForm) {
+        orderForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('order-name').value.trim();
+          const email = document.getElementById('order-email').value.trim();
+          const type = document.getElementById('order-type').value;
+          const description = document.getElementById('order-description').value.trim();
+          if(!name || !email || !type || !description) {
+            alert(currentLang === 'fr' ? "Veuillez remplir tous les champs obligatoires." : "Please fill all required fields.");
+            return;
+          }
+          const phone = document.getElementById('order-phone').value;
+          let budget = document.getElementById('order-budget-select').value;
+          const budgetCustom = document.getElementById('order-budget-custom').value.trim();
+          if(budgetCustom) budget = budgetCustom;
+          if(budget === "Autre (précisez ci-dessous)" && !budgetCustom) budget = "À définir ensemble";
+          const delay = document.getElementById('order-delay').value;
+          const subject = `DEMANDE DE DEVIS - ${type} - DW TECHNOLOGIES`;
+          const body = `Nouvelle demande de projet - DW TECHNOLOGIES\n\nNom: ${name}\nEmail: ${email}\nTéléphone: ${phone || 'Non renseigné'}\nType: ${type}\nBudget: ${budget || 'Non renseigné'}\nDélai: ${delay || 'Non renseigné'}\n\nDescription:\n${description}`;
+          window.location.href = `mailto:dietrich.wilfried16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          alert(currentLang === 'fr' ? "📧 Demande envoyée ! Je vous répondrai sous 24h." : "📧 Request sent! I will reply within 24h.");
+          orderForm.reset();
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if(contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contact-name').value.trim();
+          const email = document.getElementById('contact-email').value.trim();
+          const message = document.getElementById('contact-message').value.trim();
+          if(!name || !email || !message) {
+            alert(currentLang === 'fr' ? "Veuillez remplir nom, email et message." : "Please fill name, email and message.");
+            return;
+          }
+          const subject = document.getElementById('contact-subject').value || "Demande de contact - DW TECHNOLOGIES";
+          window.location.href = `mailto:dietrich.wilfried16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+          alert(currentLang === 'fr' ? "📧 Ouverture de votre messagerie. Cliquez sur Envoyer pour finaliser." : "📧 Opening your email client. Click Send to complete.");
+          contactForm.reset();
+        });
+      }
+
+      renderCertificates();
+      updateLanguage('fr');
+    })();
+  </script>
+</body>
+</html>
